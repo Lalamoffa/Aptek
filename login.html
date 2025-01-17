@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <a href="index.html" class="logo">Logo</a>
+        <div class="search-box">
+            <input type="text" placeholder="Axtar">
+        </div>
+        <ul class="cart-icon">
+            <li> <a href="calculator.html"><i class="ri-calculator-line calculator"></i></a></li>
+            <li><i id="cartIcon" class="ri-shopping-cart-2-line shopping"></i></li>
+            <li class="user"><a href="login.html"><i class="ri-user-3-fill"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="backbox">
+            <div class="loginMsg">
+                <div class="textcontent">
+                    <p class="title">Hesabınız yoxdur?</p>
+                    <p>Aşağıda buttona klik etməkə qeydiyyatdan keçə bilərsiniz.</p>
+                    <button id="switch1">QEYD OL</button>
+                </div>
+            </div>
+            <div class="signupMsg visibility">
+                <div class="textcontent">
+                    <p class="title">Hesabınız var?</p>
+                    <p>Səhifənizə baxmaq üçün daxil olun.</p>
+                    <button id="switch2">DAXİL OL</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="frontbox">
+            <div class="login">
+                <h2>DAXİL OL</h2>
+                <div class="inputbox">
+                    <input type="text" name="email" placeholder="  EMAIL">
+                    <input type="password" name="password" placeholder="  ŞİFRƏ">
+                </div>
+                <p>Şifrəni unutmusan?</p>
+                <button>DAXİL OL</button>
+            </div>
+
+            <div class="signup hide">
+                <h2>QEYD OL</h2>
+                <div class="inputbox">
+                    <input type="text" name="fullname" placeholder="  İSTİFADƏÇİ ADI">
+                    <input type="text" name="email" placeholder="  EMAIL">
+                    <input type="password" name="password" placeholder="  ŞİFRƏ">
+                </div>
+                <button>QEYD OL</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    var $loginMsg = $('.loginMsg'),
+        $login = $('.login'),
+        $signupMsg = $('.signupMsg'),
+        $signup = $('.signup'),
+        $frontbox = $('.frontbox');
+
+    $('#switch1').on('click', function () {
+        $loginMsg.toggleClass("visibility");
+        $frontbox.addClass("moving");
+        $signupMsg.toggleClass("visibility");
+
+        $signup.toggleClass('hide');
+        $login.toggleClass('hide');
+    })
+
+    $('#switch2').on('click', function () {
+        $loginMsg.toggleClass("visibility");
+        $frontbox.removeClass("moving");
+        $signupMsg.toggleClass("visibility");
+
+        $signup.toggleClass('hide');
+        $login.toggleClass('hide');
+    })
+
+
+</script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptek</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Logo</a>
+        <div class="search-box">
+            <input type="text" placeholder="Axtar">
+        </div>
+        <ul class="cart-icon">
+            <li> <a href="calculator.html"><i class="ri-calculator-line calculator"></i></a></li>
+            <li><i id="cartIcon" class="ri-shopping-cart-2-line shopping"></i></li>
+            <li class="user"><a href="login.html"><i class="ri-user-3-fill"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="product-card">
+            <img src="images/image.png" alt="Image">
+            <div class="product-details">
+                <div class="product-title">
+                    California Gold Nutrition, Omega 800 Ultra-Concentrated Omega-3 Fish Oil, kd-pur Triglyceride Form,
+                    1,000 mg, 90 Fish Gelatin
+                </div>
+                <div class="pharmacy-name">Aptek Adı</div>
+                <div class="price">₼25.21</div>
+            </div>
+            <div class="icons">
+                <a href="Sevimliler.html" class="heart"><i class="ri-heart-fill"></i></a>
+                <a href="#" class="shopping_add"><i id="cartIcon" class="ri-shopping-cart-2-line "></i></a>
+                <a href="#" class="whatsapp">Whatsapp</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/image.png" alt="Image">
+            <div class="product-details">
+                <div class="product-title">
+                    California Gold Nutrition, Omega 800 Ultra-Concentrated Omega-3 Fish Oil, kd-pur Triglyceride Form,
+                    1,000 mg, 90 Fish Gelatin
+                </div>
+                <div class="pharmacy-name">Aptek Adı</div>
+                <div class="price">₼25.21</div>
+            </div>
+            <div class="icons">
+                <a href="Sevimliler.html" class="heart"><i class="ri-heart-fill"></i></a>
+                <a href="#" class="shopping_add"><i id="cartIcon" class="ri-shopping-cart-2-line "></i></a>
+                <a href="#" class="whatsapp">Whatsapp</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/image.png" alt="Image">
+            <div class="product-details">
+                <div class="product-title">
+                    California Gold Nutrition, Omega 800 Ultra-Concentrated Omega-3 Fish Oil, kd-pur Triglyceride Form,
+                    1,000 mg, 90 Fish Gelatin
+                </div>
+                <div class="pharmacy-name">Aptek Adı</div>
+                <div class="price">₼25.21</div>
+            </div>
+            <div class="icons">
+                <a href="Sevimliler.html" class="heart"><i class="ri-heart-fill"></i></a>
+                <a href="#" class="shopping_add"><i id="cartIcon" class="ri-shopping-cart-2-line "></i></a>
+                <a href="#" class="whatsapp">Whatsapp</a>
+            </div>
+        </div>
+
+
+       
+
+    <!-- Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <h2>Səbətiniz</h2>
+            <p>Səbətinizdə heç bir məhsul yoxdur.</p>
+            <button class="close-btn" id="closeModal">Bağla</button>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    // Elementlər
+    const cartIcon = document.getElementById('cartIcon');
+    const cartModal = document.getElementById('cartModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Səbət ikonuna klik
+    cartIcon.addEventListener('click', () => {
+        cartModal.style.display = 'flex';
+    });
+
+    // Modal bağlama düyməsinə klik
+    closeModal.addEventListener('click', () => {
+        cartModal.style.display = 'none';
+    });
+
+    // Modal pəncərədən kənara kliklə bağlamaq
+    cartModal.addEventListener('click', (e) => {
+        if (e.target === cartModal) {
+            cartModal.style.display = 'none';
+        }
+    });
+</script>
+
+</html>
