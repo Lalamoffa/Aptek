@@ -35,12 +35,12 @@ ul li {
     margin-left: 10px;
 }
 
-.shopping {
+.calculator {
     border-radius: 10px;
     padding: 6px
 }
 
-.shopping:hover {
+.calculator:hover {
     background-color: #135e16;
     border-radius: 10px;
     padding: 6px;
@@ -83,9 +83,11 @@ ul li {
     width: 90%;
     position: relative;
 }
+
 .product-card:nth-child(1) {
     margin-top: 20px;
 }
+
 .product-card img {
     width: 80px;
     height: 80px;
@@ -225,11 +227,12 @@ ul li {
     cursor: pointer;
 
 }
-.d-none{
+
+.d-none {
     visibility: hidden;
 }
 
-footer{
+footer {
     display: none;
 }
 
@@ -239,9 +242,11 @@ footer{
     .icons .whatsapp {
         bottom: 15px;
     }
-    .shopping_add{
+
+    .shopping_add {
         right: 50px;
     }
+
     .product-title {
         width: 75%;
     }
@@ -254,7 +259,8 @@ footer{
         margin-bottom: 15px;
     }
 
-    .user, .calculator {
+    .user,
+    .calculator {
         display: none;
     }
 
@@ -267,10 +273,11 @@ footer{
         width: 380px;
     }
 
-    
-    footer{
+
+    footer {
         display: block;
     }
+
     .content {
         padding: 20px;
         text-align: center;
