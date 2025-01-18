@@ -73,41 +73,6 @@
         </div>
 
 
-       
-
-    <!-- Modal -->
-    <div class="modal" id="cartModal">
-        <div class="modal-content">
-            <h2>Səbətiniz</h2>
-            <p>Səbətinizdə heç bir məhsul yoxdur.</p>
-            <button class="close-btn" id="closeModal">Bağla</button>
-        </div>
-    </div>
-
 </body>
-
-<script>
-    // Elementlər
-    const cartIcon = document.getElementById('cartIcon');
-    const cartModal = document.getElementById('cartModal');
-    const closeModal = document.getElementById('closeModal');
-
-    // Səbət ikonuna klik
-    cartIcon.addEventListener('click', () => {
-        cartModal.style.display = 'flex';
-    });
-
-    // Modal bağlama düyməsinə klik
-    closeModal.addEventListener('click', () => {
-        cartModal.style.display = 'none';
-    });
-
-    // Modal pəncərədən kənara kliklə bağlamaq
-    cartModal.addEventListener('click', (e) => {
-        if (e.target === cartModal) {
-            cartModal.style.display = 'none';
-        }
-    });
-</script>
 
 </html>
