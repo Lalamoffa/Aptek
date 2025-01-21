@@ -4,43 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Aptek</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+
 </head>
 
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">Logo</a>
+        <a href="index.html" class="logo"><img src="images/logo.webp" alt="logo"></a>
         <div class="search-box">
-            <input type="text" placeholder="Axtar">
+            <input type="text"  name="navSearch"  placeholder="Axtar">
         </div>
         <ul class="cart-icon">
+            <li><a href="#" id="dropdownToggle"><i class="ri-map-pin-line map"></i></a></li>
             <li> <a href="calculator.html"><i class="ri-calculator-line calculator"></i></a></li>
-            <li><i id="cartIcon" class="ri-shopping-cart-2-line shopping"></i></li>
             <li class="user"><a href="login.html"><i class="ri-user-3-fill"></i></a></li>
         </ul>
+
     </nav>
+    <div class="menu">
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#">Məkanım</a>
+            <a href="#">Xəritədə göstər</a>
+        </div>
+    </div>
 
     <div class="container">
         <div class="backbox">
             <div class="loginMsg">
                 <div class="textcontent">
                     <p class="title">Hesabınız yoxdur?</p>
-                    <p>Aşağıda buttona klik etməkə qeydiyyatdan keçə bilərsiniz.</p>
+                    <p>Qeydiyyatdan keçin.</p>
                     <button id="switch1">QEYD OL</button>
                 </div>
             </div>
             <div class="signupMsg visibility">
                 <div class="textcontent">
                     <p class="title">Hesabınız var?</p>
-                    <p>Səhifənizə baxmaq üçün daxil olun.</p>
+                    <p>Daxil olun.</p>
                     <button id="switch2">DAXİL OL</button>
                 </div>
             </div>
         </div>
-
+    
         <div class="frontbox">
             <div class="login">
                 <h2>DAXİL OL</h2>
@@ -51,7 +60,7 @@
                 <p>Şifrəni unutmusan?</p>
                 <button>DAXİL OL</button>
             </div>
-
+    
             <div class="signup hide">
                 <h2>QEYD OL</h2>
                 <div class="inputbox">
@@ -61,57 +70,41 @@
                 </div>
                 <button>QEYD OL</button>
             </div>
-
+    
         </div>
+    
     </div>
 
-    <div class="bottom-menu">
-        <div class="menu-item active" data-page="calculator">
-            <a href="calculator.html">
-                <div class="icon"> <i class="ri-calculator-line"></i></div>
-            </a>
+
+
+    <footer>
+        <div class="footer-container">
+            <a href="index.html" class="logo"><img src="images/logo.webp" alt="logo"></a>
+            <p>© 2025 Bütün hüquqlar qorunur.</p>
         </div>
-        <div class="menu-item" data-page="home">
-            <a href="index.html">
-                <div class="icon"><i class="ri-home-4-line"></i></div>
-            </a>
+
+        <div class="bottom-menu">
+            <div class="menu-item" data-page="calculator">
+                <a href="calculator.html">
+                    <div class="icon"> <i class="ri-calculator-line"></i></div>
+                </a>
+            </div>
+            <div class="menu-item active" data-page="home">
+                <a href="index.html">
+                    <div class="icon"><i class="ri-home-4-line"></i></div>
+                </a>
+            </div>
+            <div class="menu-item" data-page="profile">
+                <a href="login.html">
+                    <div class="icon"><i class="ri-user-3-fill"></i></div>
+                </a>
+            </div>
         </div>
-        <div class="menu-item" data-page="profile">
-            <a href="#">
-                <div class="icon"><i class="ri-user-3-fill"></i></div>
-            </a>
-        </div>
-    </div>
+
+    </footer>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
-    var $loginMsg = $('.loginMsg'),
-        $login = $('.login'),
-        $signupMsg = $('.signupMsg'),
-        $signup = $('.signup'),
-        $frontbox = $('.frontbox');
-
-    $('#switch1').on('click', function () {
-        $loginMsg.toggleClass("visibility");
-        $frontbox.addClass("moving");
-        $signupMsg.toggleClass("visibility");
-
-        $signup.toggleClass('hide');
-        $login.toggleClass('hide');
-    })
-
-    $('#switch2').on('click', function () {
-        $loginMsg.toggleClass("visibility");
-        $frontbox.removeClass("moving");
-        $signupMsg.toggleClass("visibility");
-
-        $signup.toggleClass('hide');
-        $login.toggleClass('hide');
-    })
-
-
-</script>
+<script src="script.js"></script>
 
 </html>

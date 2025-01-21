@@ -21,14 +21,22 @@ body {
     text-decoration: none;
 }
 
-.navbar .search-box input {
-    width: 400px;
-    padding: 5px;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.logo img {
+    width: 200px;
 }
 
+.navbar .search-box input[name="navSearch"]{
+    width: 500px;
+    height: 40px;
+    padding: 20px;
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+.head{
+    font-size: 30px;
+    color: #fff;
+}
 ul li {
     display: inline;
     list-style: none;
@@ -41,6 +49,18 @@ ul li {
 }
 
 .calculator:hover {
+    background-color: #135e16;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.map {
+    margin-right: 8px;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.map:hover {
     background-color: #135e16;
     border-radius: 10px;
     padding: 6px;
@@ -60,11 +80,11 @@ ul li {
 
 .navbar .cart-icon {
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
 }
 
-.container {
+.container1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,6 +106,10 @@ ul li {
 
 .product-card:nth-child(1) {
     margin-top: 20px;
+}
+
+.product-card:last-child {
+    margin-bottom: 90px;
 }
 
 .product-card img {
@@ -166,8 +190,19 @@ ul li {
 }
 
 
-.footer-content {
-    display: none;
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4CAF50;
+    height: 70px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer-container .logo img {
+    margin-right: 30px;
+    width: 150px;
 }
 
 .check {
@@ -180,11 +215,9 @@ ul li {
 
 }
 
-.d-none {
-    visibility: hidden;
-}
 
-footer {
+
+footer .bottom-menu {
     display: none;
 }
 
@@ -220,10 +253,14 @@ footer {
 
 /* Seçilmiş kartlar üçün */
 .selected {
-    transform: scale(0.9); /* Kartı bir az kiçildir */
-    opacity: 0.9; /* Azca şəffaflıq */
-    border: 2px solid #35b729; /* Yaşıl haşiyə */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Kölgə */
+    transform: scale(0.9);
+    /* Kartı bir az kiçildir */
+    opacity: 0.9;
+    /* Azca şəffaflıq */
+    border: 2px solid #35b729;
+    /* Yaşıl haşiyə */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Kölgə */
     transition: transform 0.3s ease, opacity 0.3s ease, border 0.3s ease;
 }
 
@@ -261,10 +298,52 @@ footer {
     transition: all 0.3s ease;
 }
 
+/* dropdovn */
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: none;
+    z-index: 1000;
+    width: 200px;
+}
+
+.dropdown a {
+    display: block;
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+    color: #007BFF;
+}
+
+
 
 
 
 @media (max-width: 768px) {
+    .footer-container {
+        display: none;
+    }
+
+    footer .bottom-menu {
+        display: flex;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
     .icons .whatsapp {
         bottom: 15px;
     }
@@ -281,77 +360,58 @@ footer {
         margin-top: 15px;
     }
 
-    .product-card:nth-child(5) {
-        margin-bottom: 15px;
+    .product-card:last-child {
+        margin-bottom: 90px;
     }
 
     .user,
-    .calculator {
+    .calculator,
+    .map {
         display: none;
     }
 
-    .navbar .search-box input {
-        width: 200px;
+    .navbar .search-box input[name="navSearch"]{
+        width: 250px;
+        height: 20px;
+        padding: 15px;
+        margin-left: 15px;
     }
 
-    .header input {
+    .header input[name="navSearch"]{
         margin-left: 15%;
         width: 380px;
     }
 
+    .cart {
+        margin-bottom: 90px;
+        margin-right: 40px;
+    }
 
     footer {
         display: block;
     }
-
-    .content {
-        padding: 20px;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 24px;
-        color: #333;
-    }
-
-    .bottom-menu {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 70px;
+    .bottom-menu{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         background-color: #4CAF50;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    }
+        color: #fff;
 
-    .menu-item {
-        width: 60px;
-        height: 60px;
-        background-color: black;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        color: white;
-        transform: translateY(0);
-        transition: transform 0.3s, background-color 0.3s;
     }
-
-    .menu-item.active {
-        background-color: white;
+    .menu-item .icon{
+        margin: 10px 0;
+        border: 1px solid #fff;
+        border-radius: 25px;
+        padding: 10px;
+        font-size: 30px;
+        background-color: #135e16;
+        transition: all 0.5s ease;
+    }
+    .menu-item .icon:hover{
+        background-color: #fff;
         color: black;
         transform: translateY(-20px);
     }
 
-    .menu-item .icon {
-        font-size: 24px;
-    }
-    .cart{
-        margin-bottom: 70px;
-    }
+
 }

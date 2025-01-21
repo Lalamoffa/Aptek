@@ -45,3 +45,20 @@ checkButtons.forEach(button => {
         totalPriceElement.textContent = total.toFixed(2);
     });
 });
+
+
+const toggleButton = document.getElementById('dropdownToggle');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+toggleButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    dropdownMenu.style.display =
+        dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+// Dropdown-u bağlamaq üçün, ekrana klik etdikdə bağlanır
+window.addEventListener('click', (event) => {
+    if (!toggleButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+    }
+});

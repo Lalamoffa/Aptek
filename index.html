@@ -13,18 +13,27 @@
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">Logo</a>
+        <a href="index.html" class="logo"><img src="images/logo.webp" alt="logo"></a>
         <div class="search-box">
-            <input type="text" placeholder="Axtar">
+            <input type="text" name="navSearch" placeholder="Axtar">
         </div>
         <ul class="cart-icon">
+            <li><a href="#" id="dropdownToggle"><i class="ri-map-pin-line map"></i></a></li>
             <li> <a href="calculator.html"><i class="ri-calculator-line calculator"></i></a></li>
             <li class="user"><a href="login.html"><i class="ri-user-3-fill"></i></a></li>
         </ul>
 
     </nav>
+    <div class="menu">
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#">Məkanım</a>
+            <a href="#">Xəritədə göstər</a>
+        </div>
+    </div>
 
-    <div class="container">
+
+
+    <div class="container1">
         <div class="product-card">
             <img src="images/image.png" alt="Image">
             <div class="product-details">
@@ -89,6 +98,52 @@
             </div>
         </div>
 
+        <div class="product-card">
+            <img src="images/image.png" alt="Image">
+            <div class="product-details">
+                <div class="product-title">
+                    California Gold Nutrition, Omega 800 Ultra-Concentrated Omega-3 Fish Oil, kd-pur Triglyceride Form,
+                    1,000 mg, 90 Fish Gelatin
+                </div>
+                <div class="pharmacy-name">Aptek Adı</div>
+                <div class="price">₼25.21</div>
+            </div>
+            <div class="icons">
+                <a href="Sevimliler.html" class="heart"><i class="ri-heart-line"></i></a>
+                <a href="#" class="whatsapp">Whatsapp</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/image.png" alt="Image">
+            <div class="product-details">
+                <div class="product-title">
+                    California Gold Nutrition, Omega 800 Ultra-Concentrated Omega-3 Fish Oil, kd-pur Triglyceride Form,
+                    1,000 mg, 90 Fish Gelatin
+                </div>
+                <div class="pharmacy-name">Aptek Adı</div>
+                <div class="price">₼25.21</div>
+            </div>
+            <div class="icons">
+                <a href="Sevimliler.html" class="heart"><i class="ri-heart-line"></i></a>
+                <a href="#" class="whatsapp">Whatsapp</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="images/image.png" alt="Image">
+            <div class="product-details">
+                <div class="product-title">
+                    California Gold Nutrition, Omega 800 Ultra-Concentrated Omega-3 Fish Oil, kd-pur Triglyceride Form,
+                    1,000 mg, 90 Fish Gelatin
+                </div>
+                <div class="pharmacy-name">Aptek Adı</div>
+                <div class="price">₼25.21</div>
+            </div>
+            <div class="icons">
+                <a href="Sevimliler.html" class="heart"><i class="ri-heart-line"></i></a>
+                <a href="#" class="whatsapp">Whatsapp</a>
+            </div>
+        </div>
         <div class="product-card">
             <img src="images/image.png" alt="Image">
             <div class="product-details">
@@ -109,6 +164,10 @@
 
 
     <footer>
+        <div class="footer-container">
+            <a href="index.html" class="logo"><img src="images/logo.webp" alt="logo"></a>
+            <p>© 2025 Bütün hüquqlar qorunur.</p>
+        </div>
 
         <div class="bottom-menu">
             <div class="menu-item" data-page="calculator">
@@ -116,7 +175,7 @@
                     <div class="icon"> <i class="ri-calculator-line"></i></div>
                 </a>
             </div>
-            <div class="menu-item" data-page="home">
+            <div class="menu-item active" data-page="home">
                 <a href="index.html">
                     <div class="icon"><i class="ri-home-4-line"></i></div>
                 </a>

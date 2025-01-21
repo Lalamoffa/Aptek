@@ -4,9 +4,8 @@ body {
 }
 
 .container {
-    /*border:1px solid white;*/
-    width: 600px;
-    height: 350px;
+    width: 700px;
+    height: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -17,7 +16,7 @@ body {
 .backbox {
     background-color: #404040;
     width: 100%;
-    height: 80%;
+    height: 85%;
     position: absolute;
     transform: translate(0, -50%);
     top: 50%;
@@ -58,6 +57,8 @@ body {
 .loginMsg p,
 .signupMsg p {
     font-weight: 100;
+    margin-bottom: 10px;
+
 }
 
 .textcontent {
@@ -97,7 +98,7 @@ body {
 }
 
 .login input,
-.signup input {
+.signup input{
     display: block;
     width: 100%;
     height: 40px;
@@ -144,3 +145,22 @@ body {
 .hide {
     display: none;
 }
+.navbar .search-box input{
+    display: none;
+}
+.user{
+    display: inline;
+}
+
+@media(max-width:768px){
+    .container{
+        width: 390px;
+        height: 320px;
+    }
+    .loginMsg .title, .signupMsg .title {
+        margin-bottom: 5px;
+    }
+
+}
+
+

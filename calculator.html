@@ -12,19 +12,25 @@
 
 <body>
     <nav class="navbar">
-        <a href="index.html" class="logo">Logo</a>
-        <div class="search-box">
-            <input type="text" placeholder="Axtar">
+        <a href="index.html" class="logo"><img src="images/logo.webp" alt="logo"></a>
+        <div class="head">
+            <h3>Calculator</h3>
         </div>
-        <ul class="cart-icon d-none">
+        <ul class="cart-icon ">
+            <li><a href="#" id="dropdownToggle"><i class="ri-map-pin-line map"></i></a></li>
             <li> <a href="calculator.html"><i class="ri-calculator-line calculator"></i></a></li>
-            <li><i id="cartIcon" class="ri-shopping-cart-2-line shopping"></i></li>
             <li class="user"><a href="login.html"><i class="ri-user-3-fill"></i></a></li>
         </ul>
     </nav>
+    <div class="menu">
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#">Məkanım</a>
+            <a href="#">Xəritədə göstər</a>
+        </div>
+    </div>
 
 
-    <div class="container">
+    <div class="container1">
         <div class="product-card">
             <img src="images/image.png" alt="Image">
             <div class="product-details">
@@ -73,16 +79,23 @@
             </div>
         </div>
 
+
+        <div class="cart">
+            <h2>Seçilmişlər</h2>
+            <ul id="selected-products"></ul>
+            <p class="total">Ümumi Qiymət: <span id="total-price">0</span> AZN</p>
+        </div>
+
     </div>
 
-    <div class="cart">
-        <h2>Seçilmişlər</h2>
-        <ul id="selected-products"></ul>
-        <p class="total">Ümumi Qiymət: <span id="total-price">0</span> AZN</p>
-    </div>
+  
 
     <footer>
-
+        <div class="footer-container">
+            <a href="index.html" class="logo"><img src="images/logo.webp" alt="logo"></a>
+            <p>© 2025 Bütün hüquqlar qorunur.</p>
+        </div>
+        
         <div class="bottom-menu">
             <div class="menu-item " data-page="calculator">
                 <a href="calculator.html">
@@ -95,7 +108,7 @@
                 </a>
             </div>
             <div class="menu-item" data-page="profile">
-                <a href="#">
+                <a href="login.html">
                     <div class="icon"><i class="ri-user-3-fill"></i></div>
                 </a>
             </div>
