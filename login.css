@@ -98,7 +98,7 @@ body {
 }
 
 .login input,
-.signup input{
+.signup input {
     display: block;
     width: 100%;
     height: 40px;
@@ -145,17 +145,23 @@ body {
 .hide {
     display: none;
 }
-.navbar .search-box input{
+
+.navbar .search-box input {
     display: none;
 }
-.user{
+
+.user {
     display: inline;
+}
+
+.dropdown-menu.show {
+    display: block;
 }
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 60px;
+    right: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -165,16 +171,86 @@ body {
     z-index: 100;
 }
 
+/* Profil məlumatları */
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
 
-@media(max-width:768px){
-    .container{
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.profile-email {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #777;
+}
+
+
+/* Dropdown seçimləri */
+.dropdown-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-options li {
+    margin: 0;
+}
+
+.dropdown-options li a {
+    font-size: 18px;
+    margin: 15px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-options li a i {
+    margin-right: 10px;
+}
+
+.dropdown-options li a:hover {
+    background-color: #f2f2f2;
+}
+
+.account {
+    color: #333;
+}
+
+/* Hover zamanı dropdown menyunu göstər */
+.user:hover .dropdown-menu {
+    display: block;
+}
+
+
+@media(max-width:768px) {
+    .container {
         width: 390px;
         height: 320px;
     }
-    .loginMsg .title, .signupMsg .title {
+
+    .loginMsg .title,
+    .signupMsg .title {
         margin-bottom: 5px;
     }
 
 }
-
-

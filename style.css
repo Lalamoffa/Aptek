@@ -25,7 +25,7 @@ body {
     width: 200px;
 }
 
-.navbar .search-box input[name="navSearch"]{
+.navbar .search-box input[name="navSearch"] {
     width: 500px;
     height: 40px;
     padding: 20px;
@@ -33,10 +33,12 @@ body {
     border-radius: 20px;
     border: 1px solid #ccc;
 }
-.head{
+
+.head {
     font-size: 30px;
     color: #fff;
 }
+
 ul li {
     display: inline;
     list-style: none;
@@ -191,6 +193,10 @@ ul li {
 
 
 .footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -370,27 +376,32 @@ footer .bottom-menu {
         display: none;
     }
 
-    .navbar .search-box input[name="navSearch"]{
+    .navbar .search-box input[name="navSearch"] {
         width: 250px;
         height: 20px;
         padding: 15px;
         margin-left: 15px;
     }
 
-    .header input[name="navSearch"]{
+    .header input[name="navSearch"] {
         margin-left: 15%;
         width: 380px;
     }
 
     .cart {
         margin-bottom: 90px;
-        margin-right: 40px;
+        margin-right: 10px;
     }
 
     footer {
         display: block;
     }
-    .bottom-menu{
+
+    .bottom-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -398,7 +409,8 @@ footer .bottom-menu {
         color: #fff;
 
     }
-    .menu-item .icon{
+
+    .menu-item .icon {
         margin: 10px 0;
         border: 1px solid #fff;
         border-radius: 25px;
@@ -407,7 +419,8 @@ footer .bottom-menu {
         background-color: #135e16;
         transition: all 0.5s ease;
     }
-    .menu-item .icon:hover{
+
+    .menu-item .icon:hover {
         background-color: #fff;
         color: black;
         transform: translateY(-20px);
